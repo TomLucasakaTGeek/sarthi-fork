@@ -7,43 +7,37 @@ body {
 }
 
 .chat-app {
-  display: flex;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
 }
 
 .sidebar {
-  width: 40%;
-  /* border-right: 5px solid #ddd;  */
-  background-color: black; /* Light gray background for sidebar */
+  display: flex;
+  justify-items: flex-start;
+  flex-direction: column;
 }
 
 .search {
-  width: 100%;
-  padding: 10px;
+  width: 96%;
+  margin: 0px 10px 0px 20px;
+  padding: 10px 10px 10px 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
   background-color: #222;
   color: white;
 }
 
-.chat-list {
-  width: 100%;
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-}
-
 .chat-item {
+  width: 100%;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px; 
   border: 1px solid white;
   display: flex;
-  align-items: center;
 }
 
 .chat-item:hover {
   background-color: #eee;
-  color: black; /* Light gray on hover */
+  color: black; 
 }
 
 .avatar {
@@ -68,7 +62,6 @@ body {
 }
 
 .chat-window {
-  width: 60%;
   margin: 10px;
   padding: 20px;
   display: flex;

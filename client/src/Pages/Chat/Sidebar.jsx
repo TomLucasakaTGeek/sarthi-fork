@@ -7,7 +7,7 @@ function Sidebar({ onChatSelect }) {
     <div className="sidebar">
       <input type="text" placeholder="Search..." className="search" />
       
-      <ul className="chat-list">
+      <ul>
         {chats.map((chat) => (
           <li key={chat.id} className="chat-item" onClick={() => onChatSelect(chat)}>
             

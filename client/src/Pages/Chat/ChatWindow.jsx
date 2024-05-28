@@ -13,8 +13,10 @@ function ChatWindow({selectedChat}) {
       sender: 'Senior Dev', 
       content: 'Hi there, how can I help you today?' 
     },
-    { sender: 'Junior Dev', 
-      content: 'Hi, I\'m struggling with a bug...' },
+    { 
+      sender: 'Junior Dev', 
+      content: 'Hi, I\'m struggling with a bug...' 
+    },
   ];
 
   return (
