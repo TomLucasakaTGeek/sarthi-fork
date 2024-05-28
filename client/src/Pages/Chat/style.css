@@ -18,8 +18,8 @@ body {
 }
 
 .search {
-  width: 96%;
-  margin: 0px 10px 0px 20px;
+  width: 94%;
+  margin: 0px 0px 0px 20px;
   padding: 10px 10px 10px 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -28,7 +28,7 @@ body {
 }
 
 .chat-item {
-  width: 100%;
+  width: 95%;
   cursor: pointer;
   padding: 5px; 
   border: 1px solid white;
@@ -62,10 +62,12 @@ body {
 }
 
 .chat-window {
-  margin: 10px;
+  height: 100%;
+  border: 2px solid white;
   padding: 20px;
-  display: flex;
-  justify-content: center;
+  margin: 10px;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .chat-header {
@@ -73,6 +75,8 @@ body {
   background-color: #222;
   border: 3px solid #ddd;
   padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
 }
 
 .message-list {
