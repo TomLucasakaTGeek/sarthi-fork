@@ -1,0 +1,159 @@
+body {
+  /* margin: 0;
+  padding: 0; */
+  font-family: sans-serif;
+  background-color: black;
+  color: white; /* Set text color to white */
+}
+
+.chat-app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 40%;
+  /* border-right: 5px solid #ddd;  */
+  background-color: black; /* Light gray background for sidebar */
+}
+
+.search {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #222;
+  color: white;
+}
+
+.chat-list {
+  width: 100%;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.chat-item {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+}
+
+.chat-item:hover {
+  background-color: #eee;
+  color: black; /* Light gray on hover */
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.chat-info {
+  margin-left: 10px;
+  flex: 1;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.last-message {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.chat-window {
+  width: 60%;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.chat-header {
+  position: fixed;
+  background-color: #222;
+  border: 3px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.message-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: scroll; /* Enable scrolling for long chat history */
+  background-color: white; 
+}
+
+.message {
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.message.senior {
+  background-color: #222; /* Darker gray for senior messages */
+}
+
+.message.junior {
+  background-color: #333; /* Even darker gray for junior messages */
+}
+
+.message.senior::after,
+.message.junior::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: transparent transparent #222 transparent; /* Adjust for senior message */
+}
+
+.message.junior::after {
+  border-color: transparent transparent #333 transparent; /* Adjust for junior message */
+}
+
+.message.senior::after {
+  right: -10px;
+  bottom: 10px;
+}
+
+.message.junior::after {
+  left: -10px;
+  bottom: 10px;
+}
+
+.sender {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.send-message {
+  display: flex;
+  margin-top: 20px;
+}
+
+.send-message textarea {
+  flex: 1;
+  padding: 10px;
+  border: none; /* Remove border for a more seamless look */
+  border-radius: 3px;
+  height: 50px; /* Adjust height as needed */
+  resize: vertical; /* Allow resizing the text area */
+  background-color: #222; /* Darker gray background for input field */
+  color: white; /* Text color for input field */
+}
+
+.send-message button {
+  background-color: #4CAF50; /* Green color for send*/
+}
