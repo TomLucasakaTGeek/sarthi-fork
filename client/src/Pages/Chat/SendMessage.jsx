@@ -4,8 +4,8 @@ function SendMessage() {
     // Implement message sending functionality here
     return (
       <form className="send-message">
-        <textarea placeholder="Type your message..." />
-        <button type="submit">Send</button>
+        <textarea id='textspace' placeholder="Type your message..." />
+        <button id='sendbutton' type="submit">Send</button>
       </form>
     );
 }

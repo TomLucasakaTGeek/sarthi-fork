@@ -6,10 +6,7 @@ import SendMessage from './Pages/Chat/SendMessage'
 import Sidebar from './Pages/Chat/Sidebar'
 
 function App() {
-
-  return (
-      <ChatApp/>
-  )
+  return <ChatApp/>
 }
 
 export default App

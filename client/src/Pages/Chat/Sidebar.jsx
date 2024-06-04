@@ -3,8 +3,10 @@ import React from 'react';
 import { chats } from './ChatList'; // Replace with your chat data
 
 function Sidebar({ onChatSelect }) {
+  
   return (
     <div className="sidebar">
+      
       <input type="text" placeholder="Search..." className="search" />
       
       <ul>

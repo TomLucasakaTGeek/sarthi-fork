@@ -1,12 +1,20 @@
 import './style.css'
+import {seniormessages, juniormessages} from './Egmessage';
 
-function Message({message}) {
-    const isSenior = message.sender === 'Senior Dev';
-    return (
-      <li className={`message ${isSenior ? 'senior' : 'junior'}`}>
-        <span className="sender">{message.sender}</span>
-        <p>{message.content}</p>
+function Message() { 
+  
+  return (
+      <>
+        <li className='textfromsenior'> 
+          <span className="sender">Senior</span>
+          <p>{seniormessages}</p>
       </li>
+      
+      <li className='textfromjunior'>
+        <span className="sender">Junior</span>
+        <p>{juniormessages}</p>
+      </li>
+      </>
     );
   }
   

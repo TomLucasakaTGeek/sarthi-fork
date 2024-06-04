@@ -1,21 +1,18 @@
+import ChatWindow from './ChatWindow';
+import Sidebar from './Sidebar';
 import './style.css'
 import React, { useState } from 'react';
-import Sidebar from './Sidebar';
-import ChatWindow from './ChatWindow';
 
 function ChatApp() {
-  const [selectedChat, setSelectedChat] = useState(null);
+    const [chatSelect, setchatSelect] = useState(null)
+    function click() {
+        setchatSelect(chatSelect)
+    }
 
-  const handleChatSelect = (chat) => {
-    setSelectedChat(chat);
-  };
-
-  return (
-    <div className="chat-app">
-      <Sidebar onChatSelect={handleChatSelect} />
-      <ChatWindow selectedChat={selectedChat} />
+    <div classname='ChatApp'>
+        <Sidebar click={chatSelect}/>
+        <ChatWindow chatSelect={chatSelect}/>
     </div>
-  );
 }
 
 export default ChatApp;
