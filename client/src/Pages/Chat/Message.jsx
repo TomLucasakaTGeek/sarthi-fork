@@ -2,7 +2,6 @@ import './style.css'
 import {seniormessages, juniormessages} from './Egmessage';
 
 function Message() { 
-  
   return (
       <>
         <li className='textfromsenior'> 
