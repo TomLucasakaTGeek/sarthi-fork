@@ -1,32 +1,39 @@
 import './style.css'
-import React from 'react';
-import { chats } from './ChatList'; // Replace with your chat data
+// import people = require('people from database')
+import { chats } from './ChatList'
 
-function Sidebar({ onChatSelect }) {
-  
-  return (
-    <div className="sidebar">
-      
-      <input type="text" placeholder="Search..." className="search" />
-      
-      <ul>
-        {chats.map((chat) => (
-          <li key={chat.id} className="chat-item" onClick={() => onChatSelect(chat)}>
-            
-            <img src={chat.profilePic} alt="image" className="avatar" />
-            
-            <div className="chat-info">
-              <span className="name">{chat.name}</span>
-              <p className="last-message">{chat.lastMessage}</p>
-            </div>
-
-          </li>
-          
-        ))}
-      </ul>
-
-    </div>
-  );
+function SearchBox({searchitem}) {
+  const right_person = ''
+  for(let key in People) {
+    let pseudoname = key.People.Name
+     if(pseudoname === searchitem)
+        right_person = pseudoname
+  }
+    if(right_person == '') 
+      return "Not Found"
+    else 
+      return right_person  
 }
 
-export default Sidebar;
+function Sidebar() {
+  return (
+    <>
+      <SearchBox onsearch={searchitem} className='searchbox'/>
+      
+      <ul className='chatlist'>
+        {chats.map(chat => 
+        <li className='contacts'>
+          <img src={chat.profilePic} alt="Img" className='profilepic'/>
+          <div className='box'>
+            <span>{chat.name}</span>
+            <p>{chat.lastMessage}</p>
+          </div>
+        </li>
+      )}
+      </ul>
+
+    </>
+  )
+}
+
+export default Sidebar
